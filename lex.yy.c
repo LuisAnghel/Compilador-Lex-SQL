@@ -410,9 +410,9 @@ goto find_rule; \
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "lexmini.l"
+#line 1 "Lex.l"
 #define INITIAL 0
-#line 2 "lexmini.l"
+#line 2 "Lex.l"
 /*LIBRERIAS*/
 #include <stdio.h>
 #include <stdlib.h>
@@ -422,10 +422,9 @@ FILE *yyin;
 /* Esto le dice a Flex que lea un solo archivo de entrada*/
 /*Esto nos permitirá obtener el número de línea*/
 /*SECCION DE TOKENS*/
-/*Operadores lógicos y operadores aritméticos básicos*/
 /*PALABRAS CLAVE*/
 /*SECCIÓN DE REGLAS Y ACCIÓN SEMÁNTICA*/
-#line 429 "lex.yy.c"
+#line 428 "lex.yy.c"
 
 /* Macros after this point can all be overridden by user definitions in
  * section 1.
@@ -576,10 +575,10 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
 
-#line 48 "lexmini.l"
+#line 26 "Lex.l"
 
 
-#line 583 "lex.yy.c"
+#line 582 "lex.yy.c"
 
 	if ( yy_init )
 		{
@@ -672,45 +671,45 @@ do_action:	/* This label is used only to access EOF actions. */
 	{ /* beginning of action switch */
 case 1:
 YY_RULE_SETUP
-#line 50 "lexmini.l"
+#line 28 "Lex.l"
 { printf("\nKEYWORD: (%s)", yytext); }
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 51 "lexmini.l"
+#line 29 "Lex.l"
 { printf("\nKEYWORD:(%s)", yytext); }
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 52 "lexmini.l"
+#line 30 "Lex.l"
 { printf("\nKEYWORD: (%s)", yytext);}
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 53 "lexmini.l"
+#line 31 "Lex.l"
 { printf("\nID: (%s)", yytext);}
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 55 "lexmini.l"
+#line 33 "Lex.l"
 
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 56 "lexmini.l"
+#line 34 "Lex.l"
 
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 57 "lexmini.l"
+#line 35 "Lex.l"
 
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 58 "lexmini.l"
+#line 36 "Lex.l"
 ECHO;
 	YY_BREAK
-#line 714 "lex.yy.c"
+#line 713 "lex.yy.c"
 			case YY_STATE_EOF(INITIAL):
 				yyterminate();
 
@@ -1594,7 +1593,7 @@ int main()
 	return 0;
 	}
 #endif
-#line 58 "lexmini.l"
+#line 36 "Lex.l"
 
 
 int main(int argc, char *argv[])
