@@ -7,7 +7,7 @@ echo "Ha finalizado la ejecución del compilado de C en el archivo lex.yy.c (se 
 pause
 Compilado.exe Prueba.txt
 echo "Se ejecutó el analizador léxico sobre el archivo Prueba.txt"
-del lex.yy.c
-del Compilado.exe
+@REM del lex.yy.c
+@REM del Compilado.exe
 echo "Los archivos generados a lo largo de este proceso fueron eliminados, finalizando..."
 pause

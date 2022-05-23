@@ -46,21 +46,6 @@ SELECT	        [S|s][E|e][L|l][E|e][C|c][T|t]
 
 /*SECCIÓN DE REGLAS Y ACCIÓN SEMÁNTICA*/
 %%
-{FIN_SENTENCIA}  { printf("\nFIN_SENTENCIA (%s)", yytext);}
-{CONST_INTEGER} { fn_checkran(yytext), printf("\nCONST_INTEGER (%s)", yytext);}
-{CHAR_PUNTO}   { printf("\nCHAR_PUNTO (%s)", yytext);}
-
-{OP_SUMA}        { printf("\nOP_SUMA (%s)", yytext);}
-{OP_RESTA}       { printf("\nOP_RESTA (%s)", yytext);}
-{OP_MULTIP}      { printf("\nOP_MULTIP (%s)", yytext);}
-{OP_DIVISION}    { printf("\nOP_DIVISION (%s)", yytext);}
-{OP_IGUAL}       { printf("\nOP_EQ (%s)", yytext);}
-{OP_MAYOR}       { printf("\nOP_MAYOR (%s)", yytext);}
-{OP_MENOR}       { printf("\nOP_MENOR (%s)", yytext);}
-{OP_GOE}         { printf("\nOP_GOE (%s)", yytext);}
-{OP_LOE}         { printf("\nOP_LOE (%s)", yytext);}
-{OP_NOT}         { printf("\nOP_NOT (%s)", yytext);}
-{OP_NE}          { printf("\nOP_NE (%s)", yytext);}
 
 {WHERE} 	    { printf("\nKEYWORD: (%s)", yytext); }
 {FROM} 		    { printf("\nKEYWORD:(%s)", yytext); }
@@ -85,20 +70,4 @@ int main(int argc, char *argv[])
     printf("\nFLEX ha terminado de leer el archivo");
     fclose(yyin);
     return 0;
-}
-/*Esta función nos ayudará a saber si el valor está dentro del rango*/
-int fn_checkran(char *ptr)
-{
-    int valor = atoi(ptr);
-    if( valor < -32768 || valor > 32768 )
-    {
-        printf("Error: variable fuera de rango");
-        return yyerror();
-    }    
-}
-
-/*Esta función devolverá el error.*/
-int yyerror(void){
-    printf("\n Error léxico: carácter no válido: %s \n", yytext);
-    exit(1);
 }
